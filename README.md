@@ -1,7 +1,7 @@
 # BaSP-M2022-Etapa-1
 ## Semana-01
 ### **Trackgenix Landing Page Desktop**
-This HTML code was created in order to answer the BaSP-M2022-Etapa-1's **Weekly-Problematic-02.**
+This HTML code was created in order to answer to the BaSP-M2022-Etapa-1's **Weekly-Problematic-02.**
 >### **Sections**
 1. Header
 2. Main heading
