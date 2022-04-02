@@ -1,10 +1,24 @@
-#header {
-    background-color: #373867;
-    position: absolute;
-    background-size: 1455px 96px ;
-    font-family: "Roboto";
+body {
+    background-color: #ffffff;
+    color: #373867;
+    font-family: "Roboto", sans-serif;
 }
-
+#main-header {
+    width: 1460px;
+    height: 50px;
+    background-color: #373867;
+    font-size: 50px;
+    padding: 15px;
+    position: fixed;
+}
+.heading-level-1 {
+    font-weight: 700;
+    color: #49a37b;
+}
+.heading-level-2 {
+    font-weight: 100;
+    color: #aace9b;
+}
 .burger-menu {
     font-size: 30px;
 }
