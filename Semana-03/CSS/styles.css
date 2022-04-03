@@ -10,6 +10,7 @@ body {
     font-size: 50px;
     padding: 15px;
     position: fixed;
+    z-index: 10;
 }
 .heading-level-1 {
     font-weight: 700;
@@ -19,6 +20,125 @@ body {
     font-weight: 100;
     color: #aace9b;
 }
-.burger-menu {
+#sidebar {
+    background-color: #d9d9e2;
+    float: left;
+    position: fixed;
+    width: 300px;
+    height: 928px;
+    margin-top: 80px;
+}
+.sidebar-title {
+    font-weight: 700;
     font-size: 30px;
+    padding-top: 30px;
+    margin-left: 25px;
+    border-bottom: 2px solid #aace9b;
+    width: fit-content;
+    border-radius: 1px;
+}
+.sidebar-item {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-left: 30px;
+    border-bottom: 2px solid #7f7f9e;
+    width: 230px;
+    border-radius: 1px;
+}
+li a:hover {
+    background-color: #aace9b;
+}
+.contact-title {
+    font-size: 25px;
+    padding-top: 120px;
+}
+p {
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 30px;
+    margin-left: 30px;
+    display: block;
+}
+.contact-us-item {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-right: 30px;
+    margin-left: 40px;
+}
+#main-content {
+    margin-left: 320px;
+    padding-top: 100px;
+    padding-left: 10px;
+}
+.burger-menu {
+    font-size: 40px;
+    position: fixed;
+}
+#heading {
+    font-size: 40px;
+    font-weight: 700;
+    padding-top: 60px;
+    padding-left: 70px;
+    display: block;
+    width: 400px;
+}
+.subheading {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-left: 75px;
+    display: block;
+    width: 400px;
+}
+.paragraph {
+    display: block;
+    width: 400px;
+    line-height: 20px;
+    padding-left: 45px;
+}
+.main-image {
+    position: absolute;
+    right: 30px;
+    top: 165px;
+    display: block;
+    padding-right: 30px;
+    width: 350px;
+    height: 350px;
+}
+#functionalities {
+    display: block;
+    position: relative;
+    top: 170px;
+    left: 45px;
+}
+.section-heading {
+    font-size: 30px;
+    font-weight: 700;
+    padding-left: 30px;
+}
+.functions {
+
+}
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.icon {
+    font-size: 50px;
+    color: #c4c4c4;
+    padding: 5px;
+    position: relative;
+}
+#why-trackgenix {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 45px;
 }

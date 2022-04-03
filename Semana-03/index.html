@@ -8,27 +8,27 @@
         <meta name="author" content="Ariana Maldonado"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="https://kit.fontawesome.com/f89e55e463.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">    </head>
         <title>Trackgenix SA &#169;</title>
         <link rel="stylesheet" href="./CSS/reset.css" media="screen" />
         <link rel="stylesheet" href="./CSS/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">    </head>
     <body>
         <header id="main-header">
             <span class="heading-level-1">Radium</span>
             <span class="heading-level-2">Rocket</span>
         </header>
-        <aside id="navbar">
+        <aside id="sidebar">
             <nav>
                 <div>
                     <ul>
-                        <li><span>Menu</span></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sing Up</a></li>
-                        <li><a href="#">Login</a></li>
+                        <li class="sidebar-title">Menu</li>
+                        <li><a href="#" class="sidebar-item">Home</a></li>
+                        <li><a href="#" class="sidebar-item">Sing Up</a></li>
+                        <li ><a href="#" class="sidebar-item">Login</a></li>
                     </ul>
                 </div>
                 <div>
-                    <span>Contact Us</span>
+                    <div class="sidebar-title contact-title">Contact us</div>
                     <p>
                         How can we help you? Get in touch!
                     </p>
@@ -36,17 +36,17 @@
                 <div>
                     <ul>
                         <li>
-                            <a href="contact@trackgenix.com" target="blank">
+                            <a href="contact@trackgenix.com" target="blank" class="contact-us-item">
                                 &#128231; contact@trackgenix.com
                             </a>
                         </li>
                         <li>
-                            <a href="wa.me/1555000555" target="blank">
+                            <a href="wa.me/1555000555" target="blank" class="contact-us-item">
                                 &#128242; +1 555-000-555
                             </a>
                         </li>
                         <li>
-                            <a href="https://goo.gl/maps/eDhCkECY9SV1DgbcA" target="blank">
+                            <a href="https://goo.gl/maps/eDhCkECY9SV1DgbcA" target="blank" class="contact-us-item">
                                 &#127968; 1234 Somewhere Road #8254 Nashville, TN 00000-0000
                             </a>
                         </li>
@@ -54,62 +54,65 @@
                 </div>
             </nav>
         </aside>
-        <main>
+        <main id="main-content">
             <section>
                 <span class="burger-menu"><i class="fa-solid fa-bars"></i></span>
-                <h1>Trackgenix</h1>
-                <h2>What we do</h2>
-                <p>
+                <h1 id="heading">Trackgenix</h1>
+                <h2 class="subheading">What we do</h2>
+                <p class="paragraph">
                     Trackgenix is a web system to ease the registration of the hours worked by each employee in each
                     project and work team.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus maxime iure delectus! Ad itaque
+                    dolorum culpa maiores! Unde nihil blanditiis consequuntur reiciendis, molestiae laudantium mollitia
+                    beatae quidem nostrum, soluta labore.
                 </p>
-                <img src="assests/img/image-1.jpg" style="width:400px;height:400px;" alt="Trackgenix Clock Logo">
+                <img src="./CSS/assests/img/image-1.jpg" alt="Trackgenix Clock Logo" class="main-image">
             </section>
-            <section>
-                <h2>Functionalities</h2>
-                <div>
-                    <img src="assests/img/star-solid.svg" style="width:50px;height:50px;" alt="Star">
+            <section id="functionalities">
+                <h2 class="section-heading">Functionalities</h2>
+                <div class="functions">
                     <h3>Timesheet</h3>
-                    <p>
+                    <span class="icon"><i class="fa-solid fa-signal"></i></span>
+                    <p class="paragraph">
                         In this section, both the PM and the employee are able to complete and visualize their own
                         personal timesheet and the current status of every project they are involved in. However, the
                         timesheet of each employee and each project has to be approved by the PM.
                     </p>
                 </div>
-                <div>
-                    <img src="assests/img/star-solid.svg" style="width:50px;height:50px;" alt="Star">
+                <div class="functions">
                     <h3>Reports</h3>
-                    <p>
+                    <span class="icon"><i class="fa-solid fa-paper-plane"></i></span>
+                    <p class="paragraph">
                         This web system provides you the possibility of generating reports segmented by date for each
                         employee or project. The Admin role can also generate an informative report of each task the
                         employees have been working in individually.
                     </p>
                 </div>
-                <div>
-                    <img src="assests/img/star-solid.svg" style="width:50px;height:50px;" alt="Star">
+                <div class="functions">
                     <h3>Resource management</h3>
-                    <p>
+                    <span class="icon"><i class="fa-solid fa-rocket"></i></span>
+                    <p class="paragraph">
                         At the end of every week, Human Resources section must receive the form with the timesheet
                         data in order to manage the mensual payment of their employees as appropriate. You only need
                         to generate the reports you need.
                     </p>
                 </div>
-                <div>
-                    <img src="assests/img/star-solid.svg" style="width:50px;height:50px;" alt="Star">
+                <div class="functions">
                     <h3>Multiple roles</h3>
-                    <p>
+                    <span class="icon"><i class="fa-solid fa-gem"></i></span>
+                    <p class="paragraph">
                         Each role has different functionalities depending on whether you are an Employee, Project
                         Manager (PM), Admin or SuperAdmin. At the same time, within PM's functionalities, there is the
                         possibility of assigning a specific role to each employee, such as Developer, QA, TL, etc.
                     </p>
                 </div>
             </section>
-            <section>
-                <h2>Why do you use Trackgenix?</h2>
+            <section id="why-trackgenix">
+                <h2 class="section-heading">Why do you use Trackgenix?</h2>
                 <div>
-                    <img src="assests/img/star-solid.svg" style="width:50px;height:50px;" alt="Star">
                     <h3>Productivity booster</h3>
-                    <p>
+                    <span class="icon"><i class="fa-solid fa-bolt"></i></span>
+                    <p class="paragraph">
                         Trackgenix web system guarantees you a better management of the resources you have. It
                         increases considerably the productivity as it allows you to get more work done in less time.
                         If you want to improve the workflow in your company you are under the pressure of seizing the
@@ -117,9 +120,9 @@
                     </p>
                 </div>
                 <div>
-                    <img src="assests/img/star-solid.svg" style="width:50px;height:50px;" alt="Star">
                     <h3>Work tracking</h3>
-                    <p>
+                    <span class="icon"><i class="fa-solid fa-business-time"></i></span>
+                    <p class="paragraph">
                         <em>Track work just as you are used to, but simpler.</em> Your employees can write down when and what
                         they worked on at any time so you all can be updated at all times. This way you can get a very
                         accurate representation of how you and your employees spend time at work. When you need to
@@ -128,9 +131,9 @@
                     </p>
                 </div>
                 <div>
-                    <img src="assests/img/star-solid.svg" style="width:50px;height:50px;" alt="Star">
                     <h3>Leadership and team management</h3>
-                    <p>
+                    <span class="icon"><i class="fa-solid fa-people-roof"></i></span>
+                    <p class="paragraph">
                         Everyone works differently. While there's not only one right way to do things, there are many
                         tried-and-tested ways. That's why we are commited to flexible work and to building tools that
                         fit into any workflow. In order to improve your company leadership and team management, we
@@ -138,9 +141,9 @@
                     </p>
                 </div>
                 <div>
-                    <img src="assests/img/star-solid.svg" style="width:50px;height:50px;" alt="Star">
                     <h3>Decision making</h3>
-                    <p>
+                    <span class="icon"><i class="fa-solid fa-person-chalkboard"></i></span>
+                    <p class="paragraph">
                         An effective decision-making process, needs to ensure that you count on enough information to
                         proceed correctly. Trackgenix guarantees you a reliable data source to be based on when you
                         have to make decisions whether simple or complex.
