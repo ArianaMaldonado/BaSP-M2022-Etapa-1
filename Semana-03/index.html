@@ -167,38 +167,37 @@
                 </div>
             </section>
             <section id="information">
-                <h2>Ask for information</h2>
+                <h2 class="section-heading">Ask for information</h2>
                 <form>
                     <div>
-                        <label>Name</label>
                         <input type="text" placeholder="Name">
-                        <label>Email</label>
                         <input type="text" placeholder="Email">
                     </div>
                     <div>
-                        <label>Contact area</label>
+                        <label class="information-title">Contact area</label>
                         <div>
-                            <input type="radio" id="Human Resources" value="Human Resources" name="radio-button" checked>
-                            <label for="Human Resources">Human Resources</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="Sistems" value="Sistems" name="radio-button">
-                            <label for="Sistems">Sistems</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="Commercialization" value="Commercialization" name="radio-button">
-                            <label for="Commercialization">Commercialization</label>
+                            <div class="radio-button">
+                                <input type="radio" id="Human Resources" value="Human Resources" name="radio-button" checked>
+                                <label for="Human Resources">Human Resources</label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" id="Sistems" value="Sistems" name="radio-button">
+                                <label for="Sistems">Sistems</label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" id="Commercialization" value="Commercialization" name="radio-button">
+                                <label for="Commercialization">Commercialization</label>
+                            </div>
                         </div>
                     </div>
                     <div>
-                        <label>Message</label>
-                        <textarea name="message" rows="10" cols="30" placeholder="Message"></textarea>
-                        <button type="button" onclick="alert('Message Sent!')">Send Message</button>
-                        <button type="button">Reset</button>
+                        <textarea name="message" rows="10" cols="30" placeholder="Enter your message"></textarea>
+                        <button type="button" onclick="alert('Message Sent!')" class="send-button">SEND MESSAGE</button>
+                        <button type="button" class="reset-button">RESET</button>
                     </div>
                 </form>
             </section>
-            <section>
+            <section id="about-us">
                 <h2>About Us</h2>
                 <p class="paragraph">
                     In Trackgenix SA we're a group of software developers that offer our services to other companies
@@ -206,7 +205,7 @@
                 </p>
                 <img src="assests/img/radium-rocket.png" alt="Radium Rocket Logo">
             </section>
-            <section>
+            <section id="last-section">
                 <h3>Products</h3>
                 <ol>
                     <li>Features</li>
@@ -230,7 +229,7 @@
                 </ol>
             </section>
         </main>
-        <footer>
+        <footer id="footer">
             <ul>
                 <li>
                     <a href="https://ar.linkedin.com/">
