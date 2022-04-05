@@ -1,5 +1,5 @@
 # BaSP-M2022-Stage-1
-## Week-01
+## Week-02
 ### **Trackgenix Landing Page Desktop**
 This HTML code was created in order to answer to the BaSP-M2022-Etapa-1's **Weekly-Problematic-02.**
 ### **Trackgenix**
@@ -15,6 +15,18 @@ Trackgenix SA is a group of software developers that offer their services to oth
     >4. Ask for information
     >5. About Us
 5. Footer
+---
+## Week-03
+### **Trackgenix Landing Page Desktop _styling_**
+A CSS stylesheet was added to the HTML code in order to answer to the BaSP-M2022-Etapa-1's **Weekly-Problematic-03.**
+Added files:
+>### Week-03
+    1. 'CSS' folder
+        * reset.css file
+        * styles.css file
+    2. 'assests' folder
+        * 'img' folder
+    3. index.html file (updated)
 ---
 *Created by: Ariana Maldonado*
 >*GitHub: https://github.com/ArianaMaldonado*
