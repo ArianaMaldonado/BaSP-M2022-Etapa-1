@@ -1,0 +1,7 @@
+.footer {
+    display: flex;
+    background-color: purple;
+}
+.social-media {
+    display: flex;
+}
