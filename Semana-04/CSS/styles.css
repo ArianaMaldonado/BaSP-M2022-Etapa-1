@@ -1,0 +1,8 @@
+@media (max-width: 480px) {
+    .aside {
+        display: none;
+    }
+    .box-container {
+        flex-direction: column;
+    }
+  }

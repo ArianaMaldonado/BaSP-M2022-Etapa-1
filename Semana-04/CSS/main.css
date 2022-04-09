@@ -1,18 +1,16 @@
 .main {
-    width: 100%;
+    max-width: 75%;
     margin-top: 50px;
 }
-
 .first-section {
     display: flex;
-    padding: 50px;
-    line-height: 20px;
     justify-content: space-between;
+    padding: 50px 50px 25px 50px;
+    line-height: 20px;
 }
 .description {
     width: 50%;
     padding-right: 30px;
-
 }
 h1 {
     padding: 20px 0px;
@@ -20,25 +18,70 @@ h1 {
     font-size: 40px;
 }
 .description h2 {
-    font-weight: 700;
-    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
 }
 .first-section img {
     justify-content: flex-end;
     width: 350px;
     height: 350px;
 }
-
 .functionalities {
-    background-color: pink;
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    height: auto;
+}
+.section-title {
+    margin-left: 30px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+    min-width: none;
+    height: auto;
+    padding: 10px;
+}
+.box {
+    display: flex;
+    width: 50%;
+}
+.star-icon {
+    font-size: 50px;
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+.box-title {
+    width: 400px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
 }
 .why-trackgenix {
-    background-color: lightblue;
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    height: auto;
 }
 .information {
     background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-left: 50px;
 }
 .about-us {
     background-color: coral;
