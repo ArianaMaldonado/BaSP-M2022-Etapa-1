@@ -1,8 +1,34 @@
-@media (max-width: 480px) {
-    .aside {
+@media (max-width: 780px) {
+    .container .aside {
         display: none;
     }
-    .box-container {
+    .main {
+        justify-content: center;
+        /* margin-left: 50px; */
+    }
+    .boxes-container {
+        display: flex;
+        width: 100%;
+    }
+    /* .box {
+        width: 100%;
+    } */
+}
+@media (max-width: 480px) {
+    .container .aside {
+        display: none;
+    }
+    .boxes-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .about-us-container {
         flex-direction: column;
     }
-  }
+}

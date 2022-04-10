@@ -1,6 +1,6 @@
 .main {
     max-width: 75%;
-    margin-top: 50px;
+    margin: 50px;
 }
 .first-section {
     display: flex;
@@ -27,46 +27,48 @@ h1 {
     justify-content: flex-end;
     width: 350px;
     height: 350px;
+    padding: 20px 0;
 }
 .functionalities {
+    /* ENCIERRA TITULO Y BOXES */
     display: flex;
     flex-flow: column;
     max-width: 100%;
     height: auto;
+    padding: 30px 0;
+    border-bottom: 2px solid #d9d9e2;
+    border-radius: 1px;
 }
 .section-title {
+    /* TÍTULO DE LA SECCIÓN COMPLETA */
     margin-left: 30px;
-    padding: 20px;
+    padding: 20px 0 0px 20px;
     font-size: 30px;
     font-weight: 700;
 }
 .boxes-container {
+    /* CONTIENE LAS CAJAS COMPLETAS CON TÍTULOS, ICONOS Y PARRAFOS */
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
-    max-width: 100%;
-    min-width: none;
-    height: auto;
-    padding: 10px;
+    flex-wrap: wrap;
 }
 .box {
     display: flex;
-    width: 50%;
+    /* CONTIENE LAS ESTRELLAS Y EL TEXTO POR SEPARADO */
+    width: 45%;
+    padding: 5px;
 }
 .star-icon {
     font-size: 50px;
 }
 .text-container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    padding-bottom: 15px;
+    font-size: 16px;
     line-height: 20px;
 }
 .box-title {
-    width: 400px;
-    padding-bottom: 10px;
-    font-size: 20px;
+    border: 2px solid brown;
+    font-size: 1.2em;
     font-weight: 700;
 }
 .why-trackgenix {
@@ -74,18 +76,49 @@ h1 {
     flex-flow: column;
     max-width: 100%;
     height: auto;
+    border-bottom: 2px solid #d9d9e2;
+    border-radius: 1px;
+    padding: 30px 0;
 }
 .information {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: auto;
-    padding-left: 50px;
+    padding: 30px 0;
+    border-bottom: 2px solid #d9d9e2;
+    border-radius: 1px;
 }
 .about-us {
-    background-color: coral;
+    /* background-color: coral; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #d9d9e2;
+    border-radius: 1px;
+}
+.about-us-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-us-container p {
+    width: 30%;
+}
+.logo-rr {
+    order: 1;
+    width: 300px;
+    height: 300px;
 }
 .last-section {
-    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+}
+.last-section h4 {
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 5px;
 }
