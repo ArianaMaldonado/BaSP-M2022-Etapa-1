@@ -201,13 +201,13 @@
                 <section class="information">
                     <h2 class="section-title">Ask for information</h2>
                     <form>
-                        <div>
+                        <div class = inputs>
                             <input type="text" placeholder="Name">
                             <input type="text" placeholder="Email">
                         </div>
-                        <div>
-                            <label>Contact area</label>
-                            <div>
+                        <div class="buttons">
+                            <label class="contact-area-title">Contact area</label>
+                            <div class="radio-button-container">
                                 <div>
                                     <input type="radio" id="Human Resources" value="Human Resources" name="radio-button" checked>
                                     <label for="Human Resources">Human Resources</label>
@@ -222,10 +222,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="message-container">
                             <textarea name="message" rows="10" cols="30" placeholder="Enter your message"></textarea>
-                            <button type="button" onclick="alert('Message Sent!')" class="send-button">SEND MESSAGE</button>
-                            <button type="button" class="reset-button">RESET</button>
+                            <div class="button-container">
+                                <button type="button" onclick="alert('Message Sent!')" class="send-button">SEND MESSAGE</button>
+                                <button type="button" class="reset-button">RESET</button>
+                            </div>
                         </div>
                     </form>
                 </section>
