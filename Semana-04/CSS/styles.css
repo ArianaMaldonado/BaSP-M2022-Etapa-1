@@ -1,11 +1,12 @@
 @media (max-width: 780px) {
-    .burger-buttom {
-        display: flex;
+    .main {
+        margin: 0;
     }
-    .container .main .first-section {
-        justify-content: center;
+    .burger-button {
+        display: inline !important;
+        margin-right: 10px;
     }
-    .first-section img {
+    .img img {
         order: -1;
     }
     .container .aside {
@@ -33,12 +34,6 @@
     }
 }
 @media (max-width: 480px) {
-    .burger-buttom {
-        display: flex;
-    }
-    .container .main .first-section {
-        justify-content: center;
-    }
     .first-section img {
         order: -1;
     }
@@ -52,8 +47,10 @@
     }
     .box {
         display: flex;
-        flex-direction: column;
         width: 100px;
+    }
+    .star-icon {
+        font-size: 20px;
     }
     .radio-button-container {
         flex-direction: column;
@@ -63,5 +60,18 @@
     }
     input[type=text] {
         width: 100%;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .last-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .last-section-lists {
+        padding: 20px;
     }
 }
