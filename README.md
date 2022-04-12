@@ -28,5 +28,23 @@ Added files:
         * 'img' folder
     3. index.html file (updated)
 ---
+## Week-04
+### **Trackgenix Responsive Landing Page _flexbox styling_**
+For the BaSP-M2022-Etapa-1's **Weekly-Problematic-04**, the CSS stylesheet was deployed into generic stylesheets in order to make them useful in the future.
+
+_For this, the following files were added:_
+>### Week-04
+    1. 'CSS' folder
+        * reset.css file
+        * header.css file
+        * aside.css file
+        * main.css file
+        * footer.css file
+        * styles.css file
+    2. 'assests' folder
+        * 'img' folder
+    3. index.html file (updated)
+>*GitHub-Pages link: https://arianamaldonado.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html*
+---
 *Created by: Ariana Maldonado*
 >*GitHub: https://github.com/ArianaMaldonado*

@@ -1,13 +1,18 @@
 @media (max-width: 780px) {
     .main {
         margin: 0;
+        justify-content: center;
+        align-content: center;
     }
     .burger-button {
         display: inline !important;
         margin-right: 10px;
     }
-    .img img {
-        order: -1;
+    .first-section {
+        align-items: center;
+    }
+    .description-2 p {
+        order: 2;
     }
     .container .aside {
         display: none;
@@ -34,33 +39,6 @@
     }
 }
 @media (max-width: 480px) {
-    .first-section img {
-        order: -1;
-    }
-    .container .aside {
-        display: none;
-    }
-    .boxes-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .box {
-        display: flex;
-        width: 100px;
-    }
-    .star-icon {
-        font-size: 20px;
-    }
-    .radio-button-container {
-        flex-direction: column;
-    }
-    .inputs {
-        display: flex;
-    }
-    input[type=text] {
-        width: 100%;
-    }
     .button-container {
         display: flex;
         flex-direction: column;
