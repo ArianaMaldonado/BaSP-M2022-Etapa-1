@@ -1,14 +1,13 @@
 .main {
     display: flex;
     flex-direction: column;
-    margin: 50px;
 }
 .first-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex: 2 1 150px;
-    padding: 25px;
+    padding: 20px;
     line-height: 20px;
 }
 .description-container {
@@ -19,7 +18,7 @@
     padding: 30px 0;
 }
 .description {
-    width: 50%;
+    width: 40%;
 }
 .description-2 {
     width: 100%;
@@ -43,8 +42,8 @@ h1 {
 }
 .img img {
     justify-content: center;
-    width: 320px;
-    height: 320px;
+    max-width: 320px;
+    max-height: 320px;
     padding: 20px 15px;
 }
 .functionalities {
@@ -71,6 +70,7 @@ h1 {
 .box {
     display: flex;
     flex: 2 1 320px;
+    min-width: 40%;
     width: 100%;
     padding: 15px;
 }
@@ -99,9 +99,12 @@ h1 {
     display: flex;
     flex-direction: column;
     height: auto;
-    padding: 30px 0;
+    padding: 20px;
     border-bottom: 2px solid #d9d9e2;
     border-radius: 1px;
+}
+.information .section-title {
+    margin: 0;
 }
 .inputs {
     display: flex;
@@ -214,6 +217,7 @@ textarea {
     justify-content: space-around;
     align-items: center;
     padding-top: 30px;
+    margin-bottom: 24px;
 }
 .last-section h4 {
     padding-bottom: 5px;
