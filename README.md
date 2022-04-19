@@ -46,5 +46,21 @@ _For this, the following files were added:_
     3. index.html file (updated)
 >*GitHub-Pages link: https://arianamaldonado.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html*
 ---
+## Week-05
+### **Introduction to JavaScript**
+For the BaSP-M2022-Etapa-1's **Weekly-Problematic-05**, a group of practice exercises have been solved.
+
+_For this purpose, the following files were added:_
+>### Week-05
+    1. 'exercises' folder
+        * 01_variables_and_operators.js file
+        * 02_strings.js file
+        * 03_arrays.js file
+        * 04_if_else.js file
+        * 05_for.js file
+        * 06_functions.js file
+    2. index.html file (new)
+>*GitHub-Pages link: https://arianamaldonado.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html*
+---
 *Created by: Ariana Maldonado*
 >*GitHub: https://github.com/ArianaMaldonado*

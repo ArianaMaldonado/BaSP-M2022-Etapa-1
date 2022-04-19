@@ -46,7 +46,10 @@ probando que todo siga funcionando igual. */
 function functionApart(num1, num2) {
     if(!Number.isInteger(num1)) {
         alert(num1 + " is not an integer number, you can round it to " + Math.round(num1));
-        return Math.round(num1, num2);
+        return Math.round(num1);
+    } else if(!Number.isInteger(num2)) {
+        alert(num2 + " is not an integer number, you can round it to " + Math.round(num2));
+        return Math.round(num2);
     }
 }
 
@@ -55,9 +58,8 @@ function functionExerciseB(num1, num2) {
         alert("Error! One of these parameters is not a number!");
         return "NaN";
     } else {
-        functionApart(num1);
-        functionApart(num2);
-    return num1 + num2;
+        functionApart(num1, num2);
     }
+    return num1 + num2;
 }
 console.log(functionExerciseB(0.6, 2));

@@ -36,6 +36,5 @@ operador +).*/
 let lastStr = "maldonado sangermano";
 let firstWord = lastStr.indexOf("m");
 let secondWord = lastStr.indexOf("s");
-console.log(firstWord, secondWord);
 let result2f = lastStr.substring(0, 1).toUpperCase() + lastStr.substring(1, 10).toLowerCase() + lastStr.substring(10, 11).toLocaleUpperCase() + lastStr.substring(11).toLowerCase();
 console.log("Result-2f", result2f);
