@@ -38,7 +38,7 @@ a:hover {
 .sidebar-title {
     display: flex;
     width: fit-content;
-    padding: 0.625em 0.25em 0;
+    padding: 0.625em 0.25em 0.2em 0.25em;
     border-bottom: 2px solid #aace9b;
     border-radius: 1px;
     font-weight: 700;

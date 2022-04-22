@@ -1,0 +1,73 @@
+input[type=text], input[type=email] {
+    width: 80%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #c9c9d6;
+    border-radius: 5px;
+}
+a {
+    text-decoration: none;
+    color: #373867;
+    font-weight: 500;
+}
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    background-color: #d6d6d6;
+    color: #373867;
+}
+.login-form {
+    justify-content: center;
+    width: 365px;
+    height: 460px;
+    margin: 70px 0;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    margin-top: 40px;
+}
+.title {
+    font-size: 40px;
+    font-weight: 700;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+}
+.button {
+    width: 11.875em;
+    height: 2.9375em;
+    margin-right: 0.9375em;
+    margin-top: 0.9375em;
+    padding: 0.75em 1.25em;
+    background-color: #aace9b;
+    border-radius: 5px;
+    color:#373867;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #49a37b;
+}
+.recovery {
+    text-decoration: none;
+
+}
