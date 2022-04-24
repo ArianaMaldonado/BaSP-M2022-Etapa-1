@@ -33,8 +33,7 @@ a {
     align-items: center;
     justify-content: space-around;
     height: 80%;
-    margin-top: 40px;
-}
+    margin-top: 40px;}
 .title {
     font-size: 40px;
     font-weight: 700;
@@ -53,8 +52,6 @@ a {
 .button {
     width: 11.875em;
     height: 2.9375em;
-    margin-right: 0.9375em;
-    margin-top: 0.9375em;
     padding: 0.75em 1.25em;
     background-color: #aace9b;
     border-radius: 5px;
