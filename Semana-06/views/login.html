@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f89e55e463.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
-    <title>Trackgenix SA &#169; - Login</title>
+    <title>Login - Trackgenix SA &#169;</title>
     <link rel="stylesheet" href="../styles/reset.css" media="screen"/>
     <link rel="stylesheet" href="../styles/header.css" media="screen"/>
     <link rel="stylesheet" href="../styles/login.css" media="screen"/>
@@ -32,9 +32,11 @@
                     <h1 class="title">Login</h1>
                     <div class="inputs">
                         <label>Email</label>
-                        <input type="email">
+                        <input type="email" id="email">
+                        <div id="error-email" class="error"></div>
                         <label>Password</label>
-                        <input type="text">
+                        <input type="password" id="password">
+                        <div id="error-password" class="error"></div>
                     </div>
                     <div>
                         <button type="button" class="button">Continue</button>
@@ -71,5 +73,6 @@
             <h4>Trackgenix &#169;</h4>
         </div>
     </footer>
+    <script src="../javascript/login.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-input[type=text], input[type=email] {
+input[type="text"], input[type="email"], input[type="password"] {
     width: 80%;
     padding: 10px;
     background-color: #ffffff;
@@ -49,6 +49,11 @@ a {
     font-weight: 500;
     line-height: 40px;
 }
+.error {
+    font-size: 12px;
+    color: #ff0000;
+    width: 85%;
+}
 .button {
     width: 11.875em;
     height: 2.9375em;
@@ -66,5 +71,4 @@ a {
 }
 .recovery {
     text-decoration: none;
-
 }
