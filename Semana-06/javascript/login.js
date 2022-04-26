@@ -14,15 +14,18 @@ inputPassword.addEventListener("focus", passwordFocus);
 // Email validation
 var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 function emailBlur() {
+    var emailValidate = false;
     if(emailRegex.test(inputEmail.value)) {
         inputEmail.style.borderColor = "green";
         errorEmail.innerHTML = "";
+        emailValidate = true;
     } else {
         inputEmail.style.borderColor ="red";
         errorEmail.innerHTML = 'Please, enter a valid email.';
+        emailValidate = false;
     }
+    return emailValidate;
 }
-
 function emailFocus() {
     errorEmail.innerHTML = ' ';
 }
@@ -31,11 +34,13 @@ function emailFocus() {
 const arrayLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 const arrayNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 function passwordBlur() {
+    var passwordValidate = false;
     var containsLetters = false;
     var containsNumbers = false;
     if (inputPassword.value.length < 8 || inputPassword.value.indexOf == " ") {
         inputPassword.style.borderColor ="red";
-        return errorPassword.innerHTML = 'Enter at least 8 characters.';
+        errorPassword.innerHTML = 'Enter at least 8 characters.';
+        return passwordValidate;
     } else {
         for (let i = 0; i < inputPassword.value.length; i++) {
             const letter = inputPassword.value[i];
@@ -47,12 +52,14 @@ function passwordBlur() {
             if (containsLetters && containsNumbers) {
                 inputPassword.style.borderColor ="green";
                 errorPassword.innerHTML = '';
+                passwordValidate = true;
             } else {
                 inputPassword.style.borderColor ="red";
                 errorPassword.innerHTML = 'Password must contain numbers and letters only.';
             }
         }
     }
+    return passwordValidate;
 }
 
 function passwordFocus() {
@@ -60,5 +67,13 @@ function passwordFocus() {
 }
 
 // Button validation
-// let buttonLogin = document.querySelector('button');
-// buttonLogin.addEventListener('onclick');
+var submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', submitEvent);
+
+function submitEvent() {
+    if (emailBlur() && passwordBlur()) {
+        alert('This is your information. Email: ' + inputEmail.value + ' Password: ' + inputPassword.value + ', please confirm.');
+    } else {
+        alert('Please check your information is correct.');
+    }
+}
