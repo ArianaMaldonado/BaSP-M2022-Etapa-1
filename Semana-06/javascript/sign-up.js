@@ -61,9 +61,6 @@ var emailValidation = false;
 var passwordValidation = false;
 var repeatPasswordValidation = false;
 
-// 'SIGN UP' button
-//VER BOTONES, ESTÁN COMO LINKS
-
 // FUNCTIONS
 const arrayLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 const arrayNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -319,7 +316,7 @@ function passwordFocus() {
 
 // Repeat Password: At least 8 characters. Must contain number and letter and coincide with 'Password'.
 function repeatPasswordBlur() {
-    if (password.value === repeatPassword.value) {
+    if (password.value === repeatPassword.value || repeatPassword.value === ' ') {
         repeatPassword.style.borderColor = 'green';
         repeatPasswordValidation = true;
     } else {
@@ -330,4 +327,34 @@ function repeatPasswordBlur() {
 }
 function repeatPasswordFocus() {
     errorRepeatPassword.innerHTML = '';
+}
+
+// 'CREATE' button
+var create = document.getElementById('create');
+create.addEventListener('click', createEvent);
+
+function createEvent() {
+    if (nameBlur()
+    && surnameBlur()
+    && idBlur()
+    && dateBlur()
+    && phoneBlur()
+    && addressBlur()
+    && cityBlur()
+    && postcodeBlur()
+    && emailBlur()
+    && passwordBlur
+    && repeatPasswordBlur) {
+        alert('Sign up successful! Name: ' + nameInput.value
+        + '. Surname: ' + surname.value
+        + '. Id: ' + id.value
+        + '. Date of birth: ' + date.value
+        + '. Phone Number: ' + phone.value
+        + '. Address: ' + address.value
+        + '. City: ' + city.value
+        + '. Postcode: ' + postcode.value
+        + '. Email: ' + email.value
+        + '. Password: ' + password.value
+        + '. Repeat Password: ' + repeatPassword.value + '. Please, confirm.');
+    }
 }

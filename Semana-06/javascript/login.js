@@ -61,7 +61,6 @@ function passwordBlur() {
     }
     return passwordValidate;
 }
-
 function passwordFocus() {
     errorPassword.innerHTML = ' ';
 }
@@ -73,6 +72,7 @@ submitButton.addEventListener('click', submitEvent);
 function submitEvent() {
     if (emailBlur() && passwordBlur()) {
         alert('Login successful! Email: ' + inputEmail.value + ' Password: ' + inputPassword.value + ', please confirm.');
+        submitButton.setAttribute('href', "../views/index.html");
     } else {
         alert('Please check your information is correct.');
     }
