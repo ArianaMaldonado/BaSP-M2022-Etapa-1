@@ -1,4 +1,4 @@
-// Variables creation
+// Variables
 var nameInput = document.getElementById('name');
 var surname = document.getElementById('surname');
 var id = document.getElementById('id');
@@ -70,12 +70,14 @@ function nameBlur() {
     if(nameInput.value.length < 3 || nameInput.value == '') {
         nameInput.style.borderColor = 'red';
         errorName.innerHTML = 'At least 3 characters.'
+        nameValidation = false;
     } else {
         for (let i = 0; i < nameInput.value.length; i++) {
             const letter = nameInput.value[i];
             if (!arrayLetters.includes(letter.toLowerCase())) {
                 nameInput.style.borderColor ="red";
                 errorName.innerHTML = 'Must contain letters only.';
+                nameValidation = false;
             } else {
                 nameInput.style.borderColor ="green";
                 errorName.innerHTML = '';
@@ -95,12 +97,14 @@ function surnameBlur() {
     if(surname.value.length < 3 || surname.value == '') {
         surname.style.borderColor = 'red';
         errorSurname.innerHTML = 'At least 3 characters.'
+        surnameValidation = false;
     } else {
         for (let i = 0; i < surname.value.length; i++) {
             const letter = surname.value[i];
             if (!arrayLetters.includes(letter.toLowerCase())) {
                 surname.style.borderColor ="red";
                 errorSurname.innerHTML = 'Must contain letters only.';
+                surnameValidation = false;
             } else {
                 surname.style.borderColor ="green";
                 errorSurname.innerHTML = '';
@@ -119,6 +123,7 @@ function idBlur() {
     if(id.value.length < 7 || id.value == '') {
         id.style.borderColor = 'red';
         errorId.innerHTML = 'At least 7 characters.'
+        idValidation = false;
     } else {
         if (isNaN(id.value)) {
             id.style.borderColor ="red";
@@ -167,7 +172,8 @@ function dateFocus() {
 function phoneBlur() {
     if(phone.value.length !== 10 || phone.value == '' || isNaN(phone.value)) {
         phone.style.borderColor = 'red';
-        errorPhone.innerHTML = 'Must contain 10 characters and numbers only.'
+        errorPhone.innerHTML = 'Must contain 10 characters and numbers only.';
+        phoneValidation = false;
     } else {
         phone.style.borderColor ="green";
         errorPhone.innerHTML = '';
@@ -181,14 +187,12 @@ function phoneFocus() {
 
 // Address: At least 5 characters. Must contain letters and numbers with a space between.
 function addressBlur() {
-    var addressValidation = false;
     var containsLetters = false;
     var containsNumbers = false;
-    console.log(address.value.indexOf(' '));
     if (address.value.length < 5 || address.value === "") {
         address.style.borderColor ="red";
         errorAddress.innerHTML = 'At least 5 characters.';
-        return addressValidation;
+        addressValidation = false;
     } else {
         for (let i = 0; i < address.value.length; i++) {
             const letter = address.value[i];
@@ -198,9 +202,6 @@ function addressBlur() {
                 containsNumbers = true;
             }
             const spaceBetween = address.value.indexOf(' ');
-            console.log("value: ", address.value)
-            console.log("spaceBetween: ",spaceBetween)
-            console.log("length: ", address.value.length -1)
             if (containsLetters && containsNumbers && spaceBetween > 0 && spaceBetween < address.value.length -1) {
                 address.style.borderColor ="green";
                 errorAddress.innerHTML = '';
@@ -220,12 +221,11 @@ function addressFocus() {
 
 // City: Alphanumeric text. At least 3 letters.
 function cityBlur() {
-    var cityValidation = false;
     var containsLetters = false;
     if (city.value.length < 3 || city.value =='') {
         city.style.borderColor ="red";
         errorCity.innerHTML = 'At least 3 characters.';
-        return cityValidation;
+        cityValidation = false;
     } else {
         for (let i = 0; i < city.value.length; i++) {
             const letter = city.value[i];
@@ -239,6 +239,7 @@ function cityBlur() {
             } else {
                 city.style.borderColor ="red";
                 errorCity.innerHTML = 'Must contain letters.';
+                cityValidation = false;
             }
         }
     }
@@ -252,6 +253,7 @@ function postcodeBlur() {
     if(postcode.value.length < 4 || postcode.value.length > 5 || postcode.value == '' || isNaN(postcode.value)) {
         postcode.style.borderColor = 'red';
         errorPostcode.innerHTML = 'Must contain 4 or 5 characters and numbers only.'
+        postcodeValidation = false;
     } else {
         postcode.style.borderColor ="green";
         errorPostcode.innerHTML = '';
@@ -283,13 +285,12 @@ function emailFocus() {
 
 // Password: At least 8 characters. Must contain numbers and letters.
 function passwordBlur() {
-    var passwordValidation = false;
     var containsLetters = false;
     var containsNumbers = false;
     if (password.value.length < 8 || password.value.indexOf == " ") {
         password.style.borderColor ="red";
         errorPassword.innerHTML = 'At least 8 characters.';
-        return passwordValidation;
+        passwordValidation = false;
     } else {
         for (let i = 0; i < password.value.length; i++) {
             const letter = password.value[i];
@@ -305,6 +306,7 @@ function passwordBlur() {
             } else {
                 password.style.borderColor ="red";
                 errorPassword.innerHTML = 'Must contain numbers and letters.';
+                passwordValidation = false;
             }
         }
     }
@@ -334,17 +336,19 @@ var create = document.getElementById('create');
 create.addEventListener('click', createEvent);
 
 function createEvent() {
-    if (nameBlur()
-    && surnameBlur()
-    && idBlur()
-    && dateBlur()
-    && phoneBlur()
-    && addressBlur()
-    && cityBlur()
-    && postcodeBlur()
-    && emailBlur()
-    && passwordBlur
-    && repeatPasswordBlur) {
+    if (
+        nameValidation
+        && surnameValidation
+        && idValidation
+        && dateValidation
+        && phoneValidation
+        && addressValidation
+        && cityValidation
+        && postcodeValidation
+        && emailValidation
+        && passwordValidation
+        && repeatPasswordValidation
+    ) {
         alert('Sign up successful! Name: ' + nameInput.value
         + '. Surname: ' + surname.value
         + '. Id: ' + id.value
@@ -356,5 +360,7 @@ function createEvent() {
         + '. Email: ' + email.value
         + '. Password: ' + password.value
         + '. Repeat Password: ' + repeatPassword.value + '. Please, confirm.');
+    } else {
+        alert('Please, check you information is correct.');
     }
 }

@@ -3,7 +3,7 @@ h1 {
     font-weight: 700;
     font-size: 3em;
 }
-input[type=text] {
+input[type=text], input[type=email] {
     display: flex;
     flex: 2 1 240px;
     width: 100%;
@@ -152,6 +152,13 @@ textarea {
 .message-container {
     display: flex;
     flex-direction: column;
+}
+.error {
+    font-size: 12px;
+    color: #ff0000;
+    width: 85%;
+    margin-left: 5px;
+    line-height: 16px;
 }
 .button-conatiner {
     display: flex;
