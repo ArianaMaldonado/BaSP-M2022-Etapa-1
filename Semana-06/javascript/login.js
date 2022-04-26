@@ -72,7 +72,7 @@ submitButton.addEventListener('click', submitEvent);
 
 function submitEvent() {
     if (emailBlur() && passwordBlur()) {
-        alert('This is your information. Email: ' + inputEmail.value + ' Password: ' + inputPassword.value + ', please confirm.');
+        alert('Login successful! Email: ' + inputEmail.value + ' Password: ' + inputPassword.value + ', please confirm.');
     } else {
         alert('Please check your information is correct.');
     }
