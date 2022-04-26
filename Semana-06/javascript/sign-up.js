@@ -316,7 +316,7 @@ function passwordFocus() {
 
 // Repeat Password: At least 8 characters. Must contain number and letter and coincide with 'Password'.
 function repeatPasswordBlur() {
-    if (password.value === repeatPassword.value || repeatPassword.value === ' ') {
+    if (repeatPassword.value === password.value && repeatPassword.value) {
         repeatPassword.style.borderColor = 'green';
         repeatPasswordValidation = true;
     } else {
