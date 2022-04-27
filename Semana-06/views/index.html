@@ -208,9 +208,9 @@
                     <h2 class="section-title">Ask for information</h2>
                     <form id="my-form">
                         <div class = inputs>
-                            <input type="text" placeholder="Name" id="name">
+                            <input type="text" placeholder="Name" id="name" required>
                             <div id="error-name" class="error"></div>
-                            <input type="email" placeholder="Email" id="email">
+                            <input type="email" placeholder="Email" id="email" required>
                             <div id="error-email" class="error"></div>
                         </div>
                         <div class="buttons">
@@ -231,7 +231,7 @@
                             </div>
                         </div>
                         <div class="message-container">
-                            <textarea name="message" rows="10" cols="30" placeholder="Enter your message" id="message"></textarea>
+                            <textarea name="message" rows="10" cols="30" placeholder="Enter your message" id="message" required></textarea>
                             <div id="error-message" class="error"></div>
                             <div class="button-container">
                                 <button type="button" class="send-button" id="send">SEND MESSAGE</button>
