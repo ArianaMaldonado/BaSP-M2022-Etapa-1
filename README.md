@@ -77,7 +77,7 @@ _The folder structures resulted is the following:_
         * footer.css
         * landing.css
         * login.css
-        * employee-sing-up.css
+        * sing-up.css
         * styles.css
     3. 'views' folder
         * index.html (Landing Page)
@@ -86,8 +86,34 @@ _The folder structures resulted is the following:_
     4. 'javascript' folder
         * landing.js
         * login.js
-        * employee-sing-up.js
->*GitHub-Pages link: https://arianamaldonado.github.io/BaSP-M2022-Etapa-1/Semana-06/index.html*
+        * sing-up.js
+>*GitHub-Pages link: https://arianamaldonado.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html*
+---
+## Week-07
+### **Weekly-Problematic-06 continuation...**
+For the BaSP-M2022-Stage-2's **Weekly-Problematic-07**, a HTTP request call from JavaScript were added to the forms of the views developed previously -Login and Sign Up- in order to send the data obtained through each form to a web server.
+
+_The folder structures resulted is the following:_
+>### Week-07
+    1. 'assets' folder
+    2. 'styles' folder
+        * reset.css
+        * header.css
+        * aside.css
+        * footer.css
+        * landing.css
+        * login.css
+        * sing-up.css
+        * styles.css
+    3. 'views' folder
+        * index.html (Landing Page)
+        * employee-sign-up.html
+        * login.html
+    4. 'javascript' folder
+        * landing.js
+        * login.js
+        * sing-up.js
+>*GitHub-Pages link: https://arianamaldonado.github.io/BaSP-M2022-Etapa-1/Semana-07/views/index.html*
 ---
 *Created by: Ariana Maldonado*
 >*GitHub: https://github.com/ArianaMaldonado*

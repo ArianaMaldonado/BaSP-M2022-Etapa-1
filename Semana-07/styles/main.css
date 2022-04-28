@@ -1,0 +1,234 @@
+h1 {
+    padding-bottom: 1.25em;
+    font-weight: 700;
+    font-size: 3em;
+}
+input[type=text], input[type=email] {
+    display: flex;
+    flex: 2 1 240px;
+    width: 100%;
+    margin: 5px;
+    padding: 0.75em 1.25em;
+    border: 1px solid #373867;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+}
+textarea {
+    height: 200px;
+    padding: 0.75em 1.25em;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    border: 2px solid #373867;
+    border-radius: 4px;
+    font-family: "Roboto";
+    font-size: 0.875em;
+    font-weight: 400;
+  }
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.first-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 2 1 150px;
+    padding: 3em;
+    line-height: 1.25em;
+}
+.description-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2 2 200px;
+    width: 45%;
+    padding: 1.875em 0;
+}
+.description {
+    width: 40%;
+}
+.description-2 {
+    width: 100%;
+    height: auto;
+    flex: 2 1 150px;
+}
+.description h2 {
+    padding-top: 0.625em;
+    padding-bottom: 1.25em;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+.img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.img img {
+    justify-content: center;
+    max-width: 20em;
+    max-height: 20em;
+    padding: 1.25em 0.9375em;
+}
+.functionalities {
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    height: auto;
+    padding: 3em;
+    border-bottom: 2px solid #d9d9e2;
+    border-radius: 1px;
+}
+.section-title {
+    margin-left: 1.25em;
+    padding: 1.25em 0 1.25em 0;
+    font-size: 1.875em;
+    font-weight: 700;
+}
+.boxes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box {
+    display: flex;
+    flex: 2 1 320px;
+    min-width: 40%;
+    width: 100%;
+    padding: 0.9375em;
+}
+.star-icon {
+    padding: 10px;
+    font-size: 3.125em;
+}
+.text-container {
+    font-size: 16px;
+    line-height: 1.25em;
+}
+.box-title {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.why-trackgenix {
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    height: auto;
+    border-bottom: 2px solid #d9d9e2;
+    border-radius: 1px;
+    padding: 3em;
+}
+.information {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 3em;
+    border-bottom: 2px solid #d9d9e2;
+    border-radius: 1px;
+}
+.information .section-title {
+    margin: 0;
+}
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+.contact-area-title {
+    padding: 0.625em 0;
+    font-size: 1em;
+    font-weight: 500;
+}
+.radio-button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625em 0 1.25em 0;
+}
+.message-container {
+    display: flex;
+    flex-direction: column;
+}
+.error {
+    font-size: 12px;
+    color: #ff0000;
+    width: 85%;
+    margin-left: 5px;
+    line-height: 16px;
+}
+.button-conatiner {
+    display: flex;
+    flex-direction: row;
+}
+.send-button {
+    width: 11.875em;
+    height: 2.9375em;
+    margin-right: 0.9375em;
+    margin-top: 0.9375em;
+    padding: 0.75em 1.25em;
+    background-color: #aace9b;
+    border: 2px solid #373867;
+    border-radius: 4px;
+    color:#373867;
+    font-size: 0.75em;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+.send-button:hover {
+    background-color: #49a37b;
+}
+.reset-button {
+    width: 7.3125em;
+    height: 2.9375em;
+    padding: 0.75em 1.25em;
+    background-color: #ffffff;
+    border: 2px solid #373867;
+    border-radius: 4px;
+    color: #373867;
+    font-size: 0.75em;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+.reset-button:hover {
+    background-color: #49a37b;
+}
+.about-us {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    border-bottom: 2px solid #d9d9e2;
+    border-radius: 1px;
+}
+.about-us-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1.875em;
+}
+.about-us-container p {
+    width: 12.5em;
+}
+.logo-rr {
+    order: 1;
+    width: 18.75em;
+    height: 18.75em;
+}
+.last-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3em;
+    margin-bottom: 1.5em;
+}
+.last-section h4 {
+    padding-bottom: 5px;
+    font-size: 0.875em;
+    font-weight: 700;
+}
