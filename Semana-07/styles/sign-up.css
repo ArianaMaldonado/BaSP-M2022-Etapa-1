@@ -6,6 +6,7 @@ input[type=text], input[type=number], input[type=date], input[type=password] {
     border-radius: 5px;
 }
 input[type=email] {
+    width: 100%;
     padding: 10px;
     background-color: #ffffff;
     border: 1px solid #c9c9d6;
@@ -19,6 +20,7 @@ a {
 .main-section {
     display: flex;
     justify-content: center;
+    height: auto;
     background-color: #d6d6d6;
     font-family: "Roboto", sans-serif;
     color: #373867;
@@ -42,21 +44,23 @@ a {
 }
 .inputs-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px;
-    line-height: 30px;
+    line-height: 25px;
+    font-size: 12px;
 }
 .inputs {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 45%;
 }
 .input-email {
     display: flex;
     flex-direction: column;
-    align-self: center;
-    width: 95%;
+    align-items: center;
+    width: 100%;
 }
 .error {
     width: 85%;
@@ -75,7 +79,7 @@ a {
 }
 .login {
     display: flex;
-    flex-direction: center;
+    justify-content: center;
     text-decoration: none;
     margin-top: 20px;
     font-weight: 400;
