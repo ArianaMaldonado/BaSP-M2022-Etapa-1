@@ -62,84 +62,84 @@ var passwordValidation = false;
 var repeatPasswordValidation = false;
 
 // FUNCTIONS
-const arrayLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-const arrayNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const arrayLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const arrayNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 // Name: Letters only. At least 3 letters.
 function nameBlur() {
-    const arrayLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    const arrayLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     if(nameInput.value.length < 3 || nameInput.value == '') {
         nameInput.style.borderColor = 'red';
-        errorName.innerHTML = 'At least 3 characters.'
+        errorName.innerHTML = 'At least 3 characters.';
         nameValidation = false;
     } else {
         for (let i = 0; i < nameInput.value.length; i++) {
             const letter = nameInput.value[i];
             if (!arrayLetters.includes(letter.toLowerCase())) {
-                nameInput.style.borderColor ="red";
+                nameInput.style.borderColor ='red';
                 errorName.innerHTML = 'Must contain letters only.';
                 nameValidation = false;
             } else {
-                nameInput.style.borderColor ="green";
+                nameInput.style.borderColor ='green';
                 errorName.innerHTML = '';
                 nameValidation = true;
             }
-        }
-    }
+        };
+    };
     return nameValidation;
-}
+};
 function nameFocus() {
     errorName.innerHTML = '';
-}
+};
                 
 // Surname: Letters only. At least 3 letters.
 function surnameBlur() {
-    const arrayLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    const arrayLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     if(surname.value.length < 3 || surname.value == '') {
         surname.style.borderColor = 'red';
-        errorSurname.innerHTML = 'At least 3 characters.'
+        errorSurname.innerHTML = 'At least 3 characters.';
         surnameValidation = false;
     } else {
         for (let i = 0; i < surname.value.length; i++) {
             const letter = surname.value[i];
             if (!arrayLetters.includes(letter.toLowerCase())) {
-                surname.style.borderColor ="red";
+                surname.style.borderColor ='red';
                 errorSurname.innerHTML = 'Must contain letters only.';
                 surnameValidation = false;
             } else {
-                surname.style.borderColor ="green";
+                surname.style.borderColor ='green';
                 errorSurname.innerHTML = '';
                 surnameValidation = true;
             }
-        }
-    }
+        };
+    };
     return surnameValidation;
-}
+};
 function surnameFocus() {
     errorSurname.innerHTML = '';
-}
+};
 
 // ID: Numbers only. More than 7 numbers.
 function idBlur() {
     if(id.value.length < 7 || id.value == '') {
         id.style.borderColor = 'red';
-        errorId.innerHTML = 'At least 7 characters.'
+        errorId.innerHTML = 'At least 7 characters.';
         idValidation = false;
     } else {
         if (isNaN(id.value)) {
-            id.style.borderColor ="red";
+            id.style.borderColor ='red';
             errorId.innerHTML = 'Must contain numbers only.';
             idValidation = false;
         } else {
-            id.style.borderColor ="green";
+            id.style.borderColor ='green';
             errorId.innerHTML = '';
             idValidation = true;
         }
-    }
+    };
     return idValidation;
-}
+};
 function idFocus() {
     errorId.innerHTML = '';
-}
+};
 
 // Date of birth: dd/mm/yyyy.
 function dateBlur() {
@@ -152,8 +152,7 @@ function dateBlur() {
         age = years--;
     } else {
         age = years;
-    }
-    if (age >= 18) {
+    } if (age >= 18) {
         date.style.borderColor = 'green';
         errorDate.innerHTML = '';
         dateValidation = true;
@@ -163,10 +162,10 @@ function dateBlur() {
         dateValidation = false;
     }
     return dateValidation;
-}
+};
 function dateFocus() {
     errorDate.innerHTML = '';
-}
+};
 
 // Phone Number: Numbers only. Must contains 10 numbers.
 function phoneBlur() {
@@ -175,22 +174,22 @@ function phoneBlur() {
         errorPhone.innerHTML = 'Must contain 10 characters and numbers only.';
         phoneValidation = false;
     } else {
-        phone.style.borderColor ="green";
+        phone.style.borderColor ='green';
         errorPhone.innerHTML = '';
         phoneValidation = true;
     }
     return phoneValidation;
-}
+};
 function phoneFocus() {
     errorPhone.innerHTML = '';
-}
+};
 
 // Address: At least 5 characters. Must contain letters and numbers with a space between.
 function addressBlur() {
     var containsLetters = false;
     var containsNumbers = false;
-    if (address.value.length < 5 || address.value === "") {
-        address.style.borderColor ="red";
+    if (address.value.length < 5 || address.value === '') {
+        address.style.borderColor ='red';
         errorAddress.innerHTML = 'At least 5 characters.';
         addressValidation = false;
     } else {
@@ -203,27 +202,27 @@ function addressBlur() {
             }
             const spaceBetween = address.value.indexOf(' ');
             if (containsLetters && containsNumbers && spaceBetween > 0 && spaceBetween < address.value.length -1) {
-                address.style.borderColor ="green";
+                address.style.borderColor ='green';
                 errorAddress.innerHTML = '';
                 addressValidation = true;
             } else {
-                address.style.borderColor ="red";
+                address.style.borderColor ='red';
                 errorAddress.innerHTML = 'Must contain letters and numbers separated by a space.';
                 addressValidation = false;
             }
-        }
-    }
+        };
+    };
     return addressValidation;
-}
+};
 function addressFocus() {
     errorAddress.innerHTML = '';
-}
+};
 
 // City: Alphanumeric text. At least 3 letters.
 function cityBlur() {
     var containsLetters = false;
     if (city.value.length < 3 || city.value =='') {
-        city.style.borderColor ="red";
+        city.style.borderColor ='red';
         errorCity.innerHTML = 'At least 3 characters.';
         cityValidation = false;
     } else {
@@ -231,64 +230,63 @@ function cityBlur() {
             const letter = city.value[i];
             if (arrayLetters.includes(letter.toLowerCase())) {
                 containsLetters = true;
-            } 
-            if (containsLetters) {
-                city.style.borderColor ="green";
+            } if (containsLetters) {
+                city.style.borderColor ='green';
                 errorCity.innerHTML = '';
                 cityValidation = true;
             } else {
-                city.style.borderColor ="red";
+                city.style.borderColor ='red';
                 errorCity.innerHTML = 'Must contain letters.';
                 cityValidation = false;
             }
-        }
-    }
+        };
+    };
     return cityValidation;
-}
+};
 function cityFocus() {
     errorCity.innerHTML = '';
-}
+};
 // Postcode: Numbers only. Must contain between 4 and 5 characters.
 function postcodeBlur() {
     if(postcode.value.length < 4 || postcode.value.length > 5 || postcode.value == '' || isNaN(postcode.value)) {
         postcode.style.borderColor = 'red';
-        errorPostcode.innerHTML = 'Must contain 4 or 5 characters and numbers only.'
+        errorPostcode.innerHTML = 'Must contain 4 or 5 characters and numbers only.';
         postcodeValidation = false;
     } else {
-        postcode.style.borderColor ="green";
+        postcode.style.borderColor ='green';
         errorPostcode.innerHTML = '';
         postcodeValidation = true;
     }
     return postcodeValidation;
-}
+};
 function postcodeFocus() {
     errorPostcode.innerHTML = '';
-}
+};
 
 // Email
 function emailBlur() {
     var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     if(emailRegex.test(email.value)) {
-        email.style.borderColor = "green";
-        errorEmail.innerHTML = "";
+        email.style.borderColor = 'green';
+        errorEmail.innerHTML = '';
         emailValidation = true;
     } else {
-        email.style.borderColor ="red";
+        email.style.borderColor ='red';
         errorEmail.innerHTML = 'Please, enter a valid email.';
         emailValidation = false;
     }
     return emailValidation;
-}    
+}; 
 function emailFocus() {
     errorEmail.innerHTML = '';
-}
+};
 
 // Password: At least 8 characters. Must contain numbers and letters.
 function passwordBlur() {
     var containsLetters = false;
     var containsNumbers = false;
-    if (password.value.length < 8 || password.value.indexOf == " ") {
-        password.style.borderColor ="red";
+    if (password.value.length < 8 || password.value.indexOf == ' ') {
+        password.style.borderColor ='red';
         errorPassword.innerHTML = 'At least 8 characters.';
         passwordValidation = false;
     } else {
@@ -298,23 +296,22 @@ function passwordBlur() {
                 containsLetters = true;
             } if (arrayNumbers.includes(letter)) {
                 containsNumbers = true;
-            }
-            if (containsLetters && containsNumbers) {
-                password.style.borderColor ="green";
+            } if (containsLetters && containsNumbers) {
+                password.style.borderColor ='green';
                 errorPassword.innerHTML = '';
                 passwordValidation = true;
             } else {
-                password.style.borderColor ="red";
+                password.style.borderColor ='red';
                 errorPassword.innerHTML = 'Must contain numbers and letters.';
                 passwordValidation = false;
             }
-        }
-    }
+        };
+    };
     return passwordValidation;
-}
+};
 function passwordFocus() {
     errorPassword.innerHTML = '';
-}
+};
 
 // Repeat Password: At least 8 characters. Must contain number and letter and coincide with 'Password'.
 function repeatPasswordBlur() {
@@ -323,13 +320,13 @@ function repeatPasswordBlur() {
         repeatPasswordValidation = true;
     } else {
         repeatPassword.style.borderColor = 'red';
-        errorRepeatPassword.innerHTML = 'Password must coincide.'
+        errorRepeatPassword.innerHTML = 'Password must coincide.';
         repeatPasswordValidation = false;
     }
-}
+};
 function repeatPasswordFocus() {
     errorRepeatPassword.innerHTML = '';
-}
+};
 
 // 'CREATE' button
 var create = document.getElementById('create');
@@ -363,4 +360,4 @@ function createEvent() {
     } else {
         alert('Please, check you information is correct.');
     }
-}
+};
