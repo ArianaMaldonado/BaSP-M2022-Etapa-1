@@ -221,9 +221,9 @@ function addressFocus() {
 // City: Alphanumeric text. At least 3 letters.
 function cityBlur() {
     var containsLetters = false;
-    if (city.value.length < 3 || city.value =='') {
+    if (city.value.length <= 3 || city.value =='') {
         city.style.borderColor ='red';
-        errorCity.innerHTML = 'At least 3 characters.';
+        errorCity.innerHTML = 'Must contain more than 3 characters.';
         cityValidation = false;
     } else {
         for (let i = 0; i < city.value.length; i++) {
@@ -328,6 +328,14 @@ function repeatPasswordFocus() {
     errorRepeatPassword.innerHTML = '';
 };
 
+function getFormattedDate(date) {
+    let year = date.getFullYear();
+    let month = (1 + date.getMonth()).toString().padStart(2, '0');
+    let day = date.getDate().toString().padStart(2, '0');
+  
+    return month + '/' + day + '/' + year;
+}
+
 // 'CREATE' button
 var create = document.getElementById('create');
 create.addEventListener('click', createEvent);
@@ -346,18 +354,64 @@ function createEvent() {
         && passwordValidation
         && repeatPasswordValidation
     ) {
-        alert('Sign up successful! Name: ' + nameInput.value
-        + '. Surname: ' + surname.value
-        + '. Id: ' + id.value
-        + '. Date of birth: ' + date.value
-        + '. Phone Number: ' + phone.value
-        + '. Address: ' + address.value
-        + '. City: ' + city.value
-        + '. Postcode: ' + postcode.value
-        + '. Email: ' + email.value
-        + '. Password: ' + password.value
-        + '. Repeat Password: ' + repeatPassword.value + '. Please, confirm.');
+        fetch(`https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${nameInput.value}&lastName=${surname.value}&dni=${id.value}&dob=${getFormattedDate(new Date(date.value))}&phone=${phone.value}&address=${address.value}&city=${city.value}&zip=${postcode.value}&email=${email.value}&password=${password.value}&repeatPassword=${repeatPassword.value}`)
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    const signUpData = {
+                        name: nameInput.value,
+                        surname: surname.value,
+                        id: id.value,
+                        date: date.value,
+                        phone: phone.value,
+                        address: address.value,
+                        city: city.value,
+                        postcode: postcode.value,
+                        email: email.value,
+                        password: password.value,
+                        repeatPassword: repeatPassword.value
+                    }
+                    localStorage.setItem('signUpData', signUpData);
+                    alert('Sign up successful! Name: ' + nameInput.value
+                    + '. Surname: ' + surname.value
+                    + '. Id: ' + id.value
+                    + '. Date of birth: ' + date.value
+                    + '. Phone Number: ' + phone.value
+                    + '. Address: ' + address.value
+                    + '. City: ' + city.value
+                    + '. Postcode: ' + postcode.value
+                    + '. Email: ' + email.value
+                    + '. Password: ' + password.value
+                    + '. Repeat Password: ' + repeatPassword.value + '. Please, confirm.');
+                    document.getElementById('my-form').reset();
+                    nameInput.style.borderColor = '#373867';
+                    surname.style.borderColor = '#373867';
+                    id.style.borderColor = '#373867';
+                    date.style.borderColor = '#373867';
+                    phone.style.borderColor = '#373867';
+                    address.style.borderColor = '#373867';
+                    city.style.borderColor = '#373867';
+                    postcode.style.borderColor = '#373867';
+                    email.style.borderColor = '#373867';
+                    password.style.borderColor = '#373867';
+                    repeatPassword.style.borderColor = '#373867';
+                } else {
+                    alert('Something is wrong.');
+                }
+            })
+            .catch(error => console.error(error));
     } else {
+        nameBlur();
+        surnameBlur();
+        idBlur();
+        dateBlur();
+        phoneBlur();
+        addressBlur();
+        cityBlur();
+        postcodeBlur();
+        emailBlur();
+        passwordBlur();
+        repeatPasswordBlur();
         alert('Please, check you information is correct.');
     }
 };
