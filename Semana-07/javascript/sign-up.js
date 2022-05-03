@@ -412,3 +412,16 @@ function createEvent() {
         alert('Please, check you information is correct.');
     }
 };
+window.onload = function(){
+    nameInput.value = localStorage.getItem('name');
+    surname.value = localStorage.getItem('surname');
+    id.value = localStorage.getItem('id');
+    date.value = localStorage.getItem('date');
+    phone.value = localStorage.getItem('phone number');
+    address.value = localStorage.getItem('address');
+    city.value = localStorage.getItem('city');
+    postcode.value = localStorage.getItem('postcode');
+    email.value = localStorage.getItem('email');
+    password.value = localStorage.getItem('password');
+    repeatPassword.value = localStorage.getItem('password');
+};

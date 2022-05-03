@@ -37,7 +37,7 @@ function passwordBlur() {
     var passwordValidate = false;
     var containsLetters = false;
     var containsNumbers = false;
-    if (inputPassword.value.length < 8 || inputPassword.value) {
+    if (inputPassword.value.length < 8 || !inputPassword.value) {
         inputPassword.style.borderColor ='red';
         errorPassword.innerHTML = 'Enter at least 8 characters.';
         return passwordValidate;
@@ -69,6 +69,7 @@ var submitButton = document.getElementById('submit');
 submitButton.addEventListener('click', submitEvent);
 
 function submitEvent() {
+    console.log(emailBlur(), passwordBlur())
     if (emailBlur() && passwordBlur()) {
         fetch(`https://basp-m2022-api-rest-server.herokuapp.com/login?email=${inputEmail.value}&password=${inputPassword.value}`)
             .then(response => response.json())

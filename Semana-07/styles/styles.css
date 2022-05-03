@@ -54,13 +54,14 @@
         padding: 1.25em;
     }
 /* SIGN UP */
-    /* label {
-        width: max-content;
+    .form {
+        flex-direction: column;
+        margin: 70px 50px;
     }
-    input[type=text], input[type=password], input[type=date] {
-        width: fit-content;
+    .inputs {
+        width: 100%;
     }
     .options-container {
         padding: 0;
-    } */
+    }
 }
