@@ -355,23 +355,20 @@ function createEvent() {
         && repeatPasswordValidation
     ) {
         fetch(`https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${nameInput.value}&lastName=${surname.value}&dni=${id.value}&dob=${getFormattedDate(new Date(date.value))}&phone=${phone.value}&address=${address.value}&city=${city.value}&zip=${postcode.value}&email=${email.value}&password=${password.value}&repeatPassword=${repeatPassword.value}`)
-            .then(response => response.json())
-            .then(data => {
+        .then(response => response.json())
+        .then(data => {
                 if(data.success) {
-                    const signUpData = {
-                        name: nameInput.value,
-                        surname: surname.value,
-                        id: id.value,
-                        date: date.value,
-                        phone: phone.value,
-                        address: address.value,
-                        city: city.value,
-                        postcode: postcode.value,
-                        email: email.value,
-                        password: password.value,
-                        repeatPassword: repeatPassword.value
-                    }
-                    localStorage.setItem('signUpData', signUpData);
+                    localStorage.setItem('name', nameInput.value);
+                    localStorage.setItem('surname', surname.value);
+                    localStorage.setItem('id', id.value);
+                    localStorage.setItem('date of birth', date.value);
+                    localStorage.setItem('phone number', phone.value);
+                    localStorage.setItem('address', address.value);
+                    localStorage.setItem('city', city.value);
+                    localStorage.setItem('postcode', postcode.value);
+                    localStorage.setItem('email', email.value);
+                    localStorage.setItem('password', password.value);
+                    localStorage.setItem('repeat pasword', repeatPassword.value);
                     alert('Sign up successful! Name: ' + nameInput.value
                     + '. Surname: ' + surname.value
                     + '. Id: ' + id.value
