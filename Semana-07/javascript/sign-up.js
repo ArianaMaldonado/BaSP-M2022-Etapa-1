@@ -336,6 +336,23 @@ function getFormattedDate(date) {
     return month + '/' + day + '/' + year;
 }
 
+// Modal
+var modal = document.getElementById('modal');
+var modalClose = document.getElementById('close');
+var pModal = document.getElementById('p-modal');
+
+modalClose.addEventListener('click', closeModal);
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+}
+
 // 'CREATE' button
 var create = document.getElementById('create');
 create.addEventListener('click', createEvent);
@@ -369,7 +386,8 @@ function createEvent() {
                     localStorage.setItem('email', email.value);
                     localStorage.setItem('password', password.value);
                     localStorage.setItem('repeat pasword', repeatPassword.value);
-                    alert('Sign up successful! Name: ' + nameInput.value
+                    modal.style.display = 'flex';
+                    pModal.innerText = 'Sign up successful! Name: ' + nameInput.value
                     + '. Surname: ' + surname.value
                     + '. Id: ' + id.value
                     + '. Date of birth: ' + date.value
@@ -379,7 +397,7 @@ function createEvent() {
                     + '. Postcode: ' + postcode.value
                     + '. Email: ' + email.value
                     + '. Password: ' + password.value
-                    + '. Repeat Password: ' + repeatPassword.value + '. Please, confirm.');
+                    + '. Repeat Password: ' + repeatPassword.value + '. Please, confirm.';
                     document.getElementById('my-form').reset();
                     nameInput.style.borderColor = '#373867';
                     surname.style.borderColor = '#373867';
@@ -393,7 +411,8 @@ function createEvent() {
                     password.style.borderColor = '#373867';
                     repeatPassword.style.borderColor = '#373867';
                 } else {
-                    alert('Something is wrong.');
+                    modal.style.display = 'flex';
+                    pModal.innerText = 'Something is wrong.';
                 }
             })
             .catch(error => console.error(error));
@@ -409,7 +428,8 @@ function createEvent() {
         emailBlur();
         passwordBlur();
         repeatPasswordBlur();
-        alert('Please, check you information is correct.');
+        modal.style.display = 'flex';
+        pModal.innerText = 'Please, check you information is correct.';
     }
 };
 window.onload = function(){
