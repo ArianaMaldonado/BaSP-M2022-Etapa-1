@@ -94,3 +94,44 @@ a {
     font-size: 12px;
     text-align: center;
 }
+/* MODAL */
+.modal {
+    position: fixed;
+    display: none;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+    overflow: auto;
+}
+.p-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color:#373867;
+    font-weight: 500;
+}
+.modal-content {
+    width:  50%;
+    height: 20%;
+    margin: 15% auto;
+    padding: 20px;
+    background-color: #fefefe;
+    border: 1px solid #888888;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+#close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaaaaa;
+}
+#close:hover, .close:focus {
+    color: #49a37b;
+    text-decoration: none;
+    cursor: pointer;
+}
